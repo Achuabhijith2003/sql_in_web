@@ -1,0 +1,14 @@
+{
+  "name": "sql_in_web",
+  "version": "1.0.0",
+  "description": "sql in web integration",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "JR",
+  "license": "ISC",
+  "dependencies": {
+    "mysql": "^2.18.1"
+  }
+}
