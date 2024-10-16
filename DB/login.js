@@ -1,23 +1,29 @@
 import express from 'express';
-import connection from './sql_init.js';
+import connection from './sql_init.js'; // Ensure this is the correct path
 
 const router = express.Router();
 
 router.post('/login', (req, res) => {
-  const { email, password } = req.body;
-  const query = 'SELECT * FROM login WHERE email ? AND password = ?';
+  const { email, password } = req.body; // Get email and password from request body
 
+  // Ensure both email and password are provided
+  if (!email || !password) {
+    return res.status(400).json({ message: 'Email and password are required.' });
+  }
+
+  // SQL query to check login credentials
+  const query = 'SELECT * FROM login WHERE username = ? AND passsword = ?';
   connection.query(query, [email, password], (error, results) => {
     if (error) {
-      // Send a JSON response in case of a database error
-      return res.status(500).json({ message: 'Database error' });
+      console.error('Database query error:', error);
+      return res.status(500).json({ message: 'Internal server error.' });
     }
 
     if (results.length > 0) {
-      // User found
-      res.json({ message: 'Login successful', user: results[0] });
+      // Login successful
+      res.json({ message: 'Login successful', user: results });
     } else {
-      // User not found or wrong password
+      // Login failed
       res.status(401).json({ message: 'Invalid email or password' });
     }
   });

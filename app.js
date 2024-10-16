@@ -1,18 +1,18 @@
-// app.js
 import express from 'express';
 import bodyParser from 'body-parser';
-import loginRoutes from './DB/login.js'; // Import login routes
+import loginRoutes from './DB/login.js'; // Ensure the correct import path
 
 const app = express();
 const port = 5500;
 
 // Middleware to parse JSON requests
 app.use(bodyParser.json());
+app.use(express.static('public')); // Serve static files from the public folder
 
-// Use the login routes
-app.use('/api', loginRoutes); // Prefix the login routes with '/api'
+// Register the login route under the '/api' path
+app.use('/api', loginRoutes);
 
-// Start the Express server
+// Start the server
 app.listen(port, () => {
-  console.log(`Server is running at http://127.0.0.1:5500/public/`);
+  console.log(`Server is running at http://localhost:${port}`);
 });

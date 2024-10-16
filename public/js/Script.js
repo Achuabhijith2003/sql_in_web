@@ -13,12 +13,14 @@ document.getElementById('login-form').addEventListener('submit', async (event) =
         body: JSON.stringify({ email, password }),
       });
   
+      // Attempt to parse the response as JSON
+      const contentType = response.headers.get('content-type');
       let data;
-      try {
-        data = await response.json(); // Try to parse JSON response
-      } catch (err) {
-        data = await response.text(); // Fallback to plain text response
-        console.error('Error parsing JSON:', err);
+  
+      if (contentType && contentType.includes('application/json')) {
+        data = await response.json(); // Parse JSON if available
+      } else {
+        data = { message: await response.text() }; // Fallback to plain text
       }
   
       if (response.ok) {
