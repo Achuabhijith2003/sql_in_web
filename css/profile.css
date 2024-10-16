@@ -1,0 +1,168 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #FFF3CD;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.search-bar input {
+    width: 50%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.profile-cart {
+    display: flex;
+    align-items: center;
+}
+
+.profile-cart a,
+.profile-cart button,
+.profile-cart img {
+    margin-left: 15px;
+}
+
+.profile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.profile-content {
+    display: flex;
+    padding: 20px;
+}
+
+.sidebar {
+    width: 20%;
+    border-right: 1px solid #ccc;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 10px 0;
+}
+
+.sidebar ul li a {
+    color: #856404;
+    text-decoration: none;
+}
+
+.sidebar ul li a:hover {
+    text-decoration: underline;
+}
+
+.details {
+    width: 80%;
+    padding-left: 20px;
+}
+
+.profile-section {
+    display: none;
+}
+
+.profile-section.active {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .profile-content {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .details {
+        width: 100%;
+        padding-left: 0;
+    }
+}
+
+.profile-section form {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-section label {
+    margin-top: 10px;
+}
+
+.profile-section input,
+.profile-section select {
+    padding: 5px;
+    margin-top: 5px;
+    width: 50%;
+}
+
+.profile-section button {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #FFF3CD;
+    color: #856404;
+    border-color: #856404;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.profile-section button#save-button {
+    background-color: #856404;
+}
+
+.profile-section button:hover {
+    opacity: 0.8;
+}
+
+
+/* addreee   */
+.profile-section form {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-section label {
+    margin-top: 10px;
+}
+
+.profile-section input,
+.profile-section textarea,
+.profile-section select {
+    padding: 5px;
+    margin-top: 5px;
+    width: 50%;
+}
+
+.profile-section button {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #856404;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.profile-section button:hover {
+    opacity: 0.8;
+}
+
+#address-form {
+    display: none;
+}

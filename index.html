@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/login screen.css">
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="icon" href="image/logo2.jpg">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <h2 style="color: #856404;">Login</h2>
+            <form id="login-form">
+                <div class="input-group">
+                    <label for="login-email" style="color: #856404;">Email</label>
+                    <input type="email" id="login-email" name="login-email" required>
+                </div>
+                <div class="input-group">
+                    <label for="login-password" style="color: #856404;">Password</label>
+                    <input type="password" id="login-password" name="login-password" required>
+                </div>
+                <button type="submit" class="btn primary-btn">Sign In</button>
+            </form>
+        </div>
+    </div>
+
+    <script type="module" src="js/DB/sql_init.js"></script>
+    <script type="module" src="js/DB/login.js"></script>
+</body>
+</html>

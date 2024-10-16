@@ -1,0 +1,105 @@
+/* roboto */
+
+.roboto-thin {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.roboto-light {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-medium {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.roboto-bold {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.roboto-black {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.roboto-thin-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.roboto-light-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.roboto-regular-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.roboto-medium-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.roboto-bold-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.roboto-black-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+
+/* robot */
+
+
+/* subhead */
+h2#Subhead {
+  text-align: center;
+  font-size: 65px;
+  font-weight: 500;
+  text-shadow: 2px 0px 0px #000000; /* Adjust shadow offset as needed */
+  font-family: "Sedan SC", serif; /* Use serif fallback if "Sedan SC" not available */
+  color: gray;
+}
+
+
+/* phone re */
+/* Responsive layout for mobile (2 boxes per row) */
+@media only screen and (max-width: 768px) {
+  h2#Subhead {
+    text-align: center;
+    font-size: 45px;
+    font-weight: 500;
+    text-shadow: 2px 0px 0px #000000; /* Adjust shadow offset as needed */
+    font-family: "Sedan SC", serif; /* Use serif fallback if "Sedan SC" not available */
+    color: rgba(128, 128, 128, 0.778);
+  }
+
+}
+/* phone re */
+
+/* subhead */
